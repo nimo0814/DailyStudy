@@ -1,0 +1,36 @@
+FE
+======================================================================
+ERROR: test_youdao (test_youdao.MyTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/daiyali/PycharmProjects/pythonProject/test_project/test_case/test_youdao.py", line 16, in test_youdao
+    driver.find_element_by_id("query").clear()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 360, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="query"]"}
+  (Session info: chrome=90.0.4430.85)
+
+
+======================================================================
+FAIL: test_baidu (test_baidu.MyTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/daiyali/PycharmProjects/pythonProject/test_project/test_case/test_baidu.py", line 20, in test_baidu
+    self.assertEqual(title,"unittest - 百度搜索")
+AssertionError: 'unittest_百度搜索' != 'unittest - 百度搜索'
+- unittest_百度搜索
+?         ^
++ unittest - 百度搜索
+?         ^^^
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 29.343s
+
+FAILED (failures=1, errors=1)
