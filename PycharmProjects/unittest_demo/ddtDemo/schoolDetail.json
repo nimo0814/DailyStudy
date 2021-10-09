@@ -1,0 +1,74 @@
+{
+    "config": {
+        "name": "testcase description",
+        "variables": {},
+        "verify": false
+    },
+    "teststeps": [
+        {
+            "name": "/usercenter/school/v1/schoolDetail",
+            "request": {
+                "url": "http://dev.api.maltbaby.com.cn/usercenter/school/v1/schoolDetail",
+                "method": "POST",
+                "cookies": {
+                    "token": "208de87e11bdf14a93197121cbdcd8f2cfe9"
+                },
+                "headers": {
+                    "Host": "dev.api.maltbaby.com.cn",
+                    "Content-Length": "15",
+                    "Origin": "http://dev.m.maltbaby.com.cn",
+                    "platform": "GongZhongHao",
+                    "User-Agent": "Mozilla/5.0 (Linux; Android 9; V1813BA Build/PKQ1.181030.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/68.0.3440.91 Mobile Safari/537.36 DOOLUU/202903-B",
+                    "Content-type": "application/json",
+                    "Accept": "*/*",
+                    "Accept-Encoding": "gzip, deflate",
+                    "Accept-Language": "zh-CN,en-US;q=0.9",
+                    "Cookie": "token=208de87e11bdf14a93197121cbdcd8f2cfe9",
+                    "X-Requested-With": "com.enjoy.malt.teacher",
+                    "Connection": "keep-alive"
+                },
+                "json": {
+                    "id": "201808"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json;charset=UTF-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "body.success",
+                        true
+                    ]
+                },
+                {
+                    "eq": [
+                        "body.code",
+                        "00000000"
+                    ]
+                },
+                {
+                    "eq": [
+                        "body.info",
+                        "成功"
+                    ]
+                },
+                {
+                    "eq": [
+                        "body.errorDetail",
+                        null
+                    ]
+                }
+            ]
+        }
+    ]
+}
