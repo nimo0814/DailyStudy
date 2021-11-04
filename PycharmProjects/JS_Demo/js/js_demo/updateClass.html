@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<style>
+  .show{
+    display:block;
+  }
+  .hidden{
+    display: none;
+  }
+</style>
+<p class="tip show">我要早睡早起，不要再熬夜了</p>
+<button class="toggle">切换</button>
+<script>
+  var toggleBtn=document.querySelector('.toggle');
+  var tipEle=document.querySelector('.tip');
+  toggleBtn.addEventListener('click',function () {
+    var className=tipEle.className;
+    if(className.indexOf('show')>-1){
+      tipEle.className='tip hidden';
+      return;
+    }
+    tipEle.className='tip show';
+
+  });
+</script>
+</body>
+
+</html>

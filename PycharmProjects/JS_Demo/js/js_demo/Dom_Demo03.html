@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<style>
+  .btn {
+    border: 1px solid #4caf50;
+    font-size: 14px;
+    padding: 8px 12px;
+    color: #4caf50;
+    outline: none;
+  }
+  .btn:active {
+    background: #eee;
+  }
+
+  input {
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+  }
+
+  p {
+    font-size: 22px;
+  }
+</style>
+
+
+<input type="text">
+
+<button class="btn">
+  按钮
+</button>
+
+<p>1</p>
+<script>
+  var btn=document.querySelector('.btn');
+  var input=document.querySelector('input');
+  var p=document.querySelector('p');
+
+  var total=1;
+  btn.addEventListener('click',function(){
+    input.value=input.value.split('').reverse().join('');
+    btn.value=input.value;
+    p.innerText=input.value;
+  });
+  input.addEventListener('keyup',function (){
+    btn.innerText=inputvalue;
+  });
+</script>
+</body>
+</html>

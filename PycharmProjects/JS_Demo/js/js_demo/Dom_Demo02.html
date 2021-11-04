@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+  .btn {
+    border: 1px solid #4caf50;
+    font-size: 14px;
+    padding: 8px 12px;
+    color: #4caf50;
+    outline: none;
+  }
+  .btn:active {
+    background: #eee;
+  }
+
+  p {
+    font-size: 22px;
+  }
+</style>
+
+
+<button class="btn">
+  我是一个可以改变一切的按钮
+</button>
+
+<p>1</p>
+
+  <script>
+    var btn=document.querySelector('.btn');
+    var p=document.querySelector('p');
+    var total=1;
+
+    btn.onclick=function(){
+      p.innerText=++total;
+      if (total>=5){
+        btn.onclick=null;
+      }
+    };
+
+  </script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<label>
+  <input type="checkbox" class="checkbox">
+  爱我别走
+</label>
+<div style="margin-top: 16px;">
+  <button class="toggle">切换！</button>
+</div>
+<script>
+  var checkbbox=document.querySelector('.checkbox');
+  var toggleBtn=document.querySelector('.toggle');
+
+  toggleBtn.onclik=function (){
+    var checked=checkbbox.getAttribute('checked');
+
+    if(checked){
+      checkbbox.removeAttribute('checked','');
+
+    }else{
+      checkbbox.setAttribute('checked','checked');
+    }
+  };
+</script>
+</body>
+</html>

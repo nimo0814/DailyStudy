@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>取消计时器</title>
+  <script type="text/javascript">
+    function clock(){
+      var time=new Date();
+      document.getElementById("clock").value=time;
+    }
+    var i=setInterval("clock()",1000);
+  </script>
+</head>
+<body>
+<form>
+  <input type="text" id="clock" size="50"/>
+  <input type="button" value="Stop" onclick="clearInterval(i)">
+</form>
+
+</body>
+</html>

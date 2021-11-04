@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text" class="input-here">
+<div class="log"></div>
+<script>
+  var inputEle=document.querySelector('.input-here');
+  var logEle=document.querySelector('.log');
+  inputEle.onkeydown=function (event){
+    var ele=document.createComment('p');
+    ele.innerText='按下了'+event.keyCode;
+    logEle.appendChild(ele);
+  }
+  inputEle.addEventListener('keyup',function (event) {
+    var ele=document.createComment('p');
+    ele.innerText='弹起了'+event.keyCode;
+    logEle.appendChild(ele);
+
+  });
+</script>
+</body>
+</html>

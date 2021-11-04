@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .btn {
+    border: 1px solid #4caf50;
+    font-size: 22px;
+    padding: 8px 12px;
+    color: #4caf50;
+    outline: none;
+  }
+  .btn:active {
+    background: #eee;
+  }
+</style>
+
+<button class="btn">
+  我是一个可以改变一切的按钮
+</button>
+  <script>
+    var btn=document.querySelector('.btn');
+    btn.onclick=function(){
+      var text=btn.innerText;
+      btn.innerText=text.replace('一切','世界');
+    };
+
+  </script>
+</html>

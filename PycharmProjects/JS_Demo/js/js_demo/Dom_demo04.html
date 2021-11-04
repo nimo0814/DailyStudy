@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<style>
+  .btn {
+    border: 1px solid #4caf50;
+    font-size: 14px;
+    padding: 8px 12px;
+    color: #4caf50;
+    outline: none;
+  }
+  .btn:active {
+    background: #eee;
+  }
+</style>
+
+<button class="btn">
+  按钮
+</button>
+<p></p>
+<script>
+  var btn=document.querySelector('.btn');
+  var p=document.querySelector('p');
+  var total=1;
+
+  btn.addEventListener('click',function(){
+    btn.innerText=++total;
+  });
+  btn.addEventListener('click',function(){
+    p.innerText=total;
+  });
+</script>
+</body>
+</html>

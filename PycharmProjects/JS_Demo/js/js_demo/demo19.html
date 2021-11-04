@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<strong>操作成功</strong>
+<br>
+<nobr><span id='time'>5</span></nobr>
+<span>秒后回到主页</span>
+<a href='javascript:back()'>返回</a>
+<script type="text/javascript">
+  var time=document.getElementById('time').innerHTML;
+  setTimeout("changeTime()",1000);
+  function changeTime(){
+    if(time==0){
+      back();
+    }
+    time--;
+    document.getElementById('time').innerHTML=time;
+    setTimeout("changeTime()",1000);
+  }
+  function back(){
+    clearTimeout();
+    window.history.back();
+  }
+</script>
+</body>
+</html>

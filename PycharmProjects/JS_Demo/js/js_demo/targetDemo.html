@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="a">
+  我是第一个节点 a
+  <div class="b">
+    我是第二个节点 b
+    <div class="c">
+      我是第三个节点 c
+      <div class="d">
+        我是第四个节点 d
+        <div class="e">
+          我是第五个节点 e
+          <div class="f">
+            我是最里面的一个元素 f
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="result" style="margin-top: 16px;"></div>
+<script>
+  var resultEle=document.querySelector('.result');
+  document.querySelector('.a').addEventListener('click',function (e){
+    resultEle.innerText='捕获到的元素类名是'+e.target.className;
+  });
+</script>
+</body>
+</html>

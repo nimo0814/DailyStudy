@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<style>
+  .list {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .list .item {
+    width: 100%;
+    border: 1px dashed #4caf50;
+    border-bottom: 0;
+    border-radius: 2px;
+    padding: 16px;
+  }
+
+  .list .item:last-child {
+    border-bottom: 1px dashed #4caf50;
+  }
+
+  .list .item button {
+    border-radius: 2px;
+    font-size: 14px;
+    color: #666;
+    outline: none;
+  }
+
+  .list .item button:active {
+    background: #eee;
+  }
+</style>
+
+<div class="list">
+  <div class="item">
+    <p>一句简单的介绍。</p>
+    <button>点击我删除这条</button>
+  </div>
+
+  <div class="item">
+    <p>两句简单的介绍。两句简单的介绍。</p>
+    <button>点击我删除这条</button>
+  </div>
+</div>
+<script>
+  var items=document.querySelectorAll('.list .item');
+  var btns=document.querySelectorAll('.list .item button');
+  items.forEach(function(item){
+    item.addEventListener('click',function(){
+      alert('马上进入到详情');
+    });
+  });
+  btns.forEach(function (btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();//阻止冒泡
+      var parent=btn.parentNode;
+      parent.parentNode.removeChild(parent);
+    });
+  });
+</script>
+</body>
+</html>
